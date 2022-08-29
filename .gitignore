@@ -1,3 +1,6 @@
+# VSCode
 build/
-cmake-build-*/
 .vscode/
+# CLion
+.idea/
+cmake-build-*/
