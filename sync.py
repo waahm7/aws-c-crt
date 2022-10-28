@@ -16,7 +16,7 @@ class Repo:
     url: str
 
 
-def all_repos() -> list[Repo]:
+def all_repos():
     """Read .gitmodules and return Repo list"""
     start_pattern = re.compile(r'\[submodule')
     path_pattern = re.compile(r'\s+path = (\S+)')
