@@ -1,0 +1,62 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "s32",
+            "program": "${workspaceFolder}/build/aws-c-s3/tests/aws-c-s3-tests",
+            "args": [
+                "test_get_platforms_with_recommended_config"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "auth",
+            "program": "${workspaceFolder}/build/aws-c-auth/tests/aws-c-auth-tests",
+            "args": [
+                "credentials_provider_sts_web_identity_new_destroy_from_parameters"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "io",
+            "program": "${workspaceFolder}/build/aws-c-io/tests/aws-c-io-tests",
+            "args": [
+                "test_invalid_cert_import"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "common",
+            "program": "${workspaceFolder}/build/aws-c-common/tests/aws-c-common-tests",
+            "args": [
+                "test_normalize_directory_separator"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "sample",
+            "program": "${workspaceFolder}/build/aws-c-s3/samples/s3/s3",
+            "args": [
+                "cp",
+                "s3://aws-s3-cli-30g-2/folder1/",
+                "./download",
+                "--region",
+                "us-west-2"
+            ],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
