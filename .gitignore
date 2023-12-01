@@ -4,3 +4,4 @@ build/
 # CLion
 .idea/
 cmake-build-*/
+*.log

@@ -31,6 +31,10 @@
         "string": "c",
         "string_view": "c",
         "string.h": "c",
-        "array_list.h": "c"
+        "array_list.h": "c",
+        "mutex.h": "c",
+        "socket.h": "c",
+        "locale": "c",
+        "s3_checksums.h": "c"
     }
 }

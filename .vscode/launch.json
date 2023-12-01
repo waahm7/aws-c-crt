@@ -10,7 +10,17 @@
             "name": "s32",
             "program": "${workspaceFolder}/build/aws-c-s3/tests/aws-c-s3-tests",
             "args": [
-                "test_get_platforms_with_recommended_config"
+                "test_s3_download_multipart_get_single_part_upload"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "s3range",
+            "program": "${workspaceFolder}/build/aws-c-s3/tests/aws-c-s3-tests",
+            "args": [
+                "test_s3_range_requests"
             ],
             "cwd": "${workspaceFolder}"
         },
@@ -41,6 +51,16 @@
             "program": "${workspaceFolder}/build/aws-c-common/tests/aws-c-common-tests",
             "args": [
                 "test_normalize_directory_separator"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "event-stream",
+            "program": "${workspaceFolder}/build/aws-c-event-stream/tests/aws-c-event-stream-tests",
+            "args": [
+                "test_streaming_decoder_incoming_application_variable_headers_with_empty_length_pair_valid"
             ],
             "cwd": "${workspaceFolder}"
         },
