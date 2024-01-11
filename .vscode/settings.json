@@ -35,6 +35,13 @@
         "mutex.h": "c",
         "socket.h": "c",
         "locale": "c",
-        "s3_checksums.h": "c"
+        "s3_checksums.h": "c",
+        "s3_meta_request_impl.h": "c",
+        "system_error": "c",
+        "ios": "c",
+        "credentials.h": "c",
+        "aws_profile.h": "c",
+        "credentials_utils.h": "c",
+        "process.h": "c"
     }
 }

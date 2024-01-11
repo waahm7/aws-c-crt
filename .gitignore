@@ -5,3 +5,5 @@ build/
 .idea/
 cmake-build-*/
 *.log
+out/
+.cache/

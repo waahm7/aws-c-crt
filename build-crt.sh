@@ -11,7 +11,7 @@ git clone https://github.com/awslabs/aws-c-compression.git
 git clone https://github.com/awslabs/aws-c-http.git
 git clone https://github.com/awslabs/aws-c-sdkutils.git
 git clone https://github.com/awslabs/aws-c-auth.git
-git clone -b env_detection_waqar https://github.com/awslabs/aws-c-s3.git
+git clone https://github.com/awslabs/aws-c-s3.git
 
 
 cmake -S aws-lc -B aws-lc/build -DCMAKE_INSTALL_PREFIX=~/work/build  -DCMAKE_BUILD_TYPE=Debug -DDISABLE_GO=ON
@@ -56,5 +56,3 @@ cmake --build aws-c-auth/build --target install
 cmake -S aws-c-s3 -B aws-c-s3/build -DCMAKE_INSTALL_PREFIX=~/work/build -DCMAKE_PREFIX_PATH=~/work/build -DCMAKE_BUILD_TYPE=Debug
 cmake --build aws-c-s3/build --target install
 
-
-~/work/crt/aws-c-s3/build/samples/s3/s3 platform-info -v TRACE
