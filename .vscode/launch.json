@@ -10,7 +10,7 @@
             "name": "s32",
             "program": "${workspaceFolder}/build/aws-c-s3/tests/aws-c-s3-tests",
             "args": [
-                "test_s3_download_multipart_get_single_part_upload"
+                "test_s3_upload_review_checksum_location_none"
             ],
             "cwd": "${workspaceFolder}"
         },
@@ -20,7 +20,7 @@
             "name": "s3Fail",
             "program": "${workspaceFolder}/build/aws-c-s3/tests/aws-c-s3-tests",
             "args": [
-                "test_s3_get_object_empty_object"
+                "test_s3_get_object_multiple_serial"
             ],
             "cwd": "${workspaceFolder}"
         },
@@ -40,7 +40,7 @@
             "name": "auth",
             "program": "${workspaceFolder}/build/aws-c-auth/tests/aws-c-auth-tests",
             "args": [
-                "credentials_provider_sts_from_profile_config_with_chain_cycle_and_static_creds"
+                "credentials_provider_sts_from_profile_config_with_chain_and_partial_profile_creds"
             ],
             "cwd": "${workspaceFolder}"
         },
