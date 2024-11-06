@@ -7,3 +7,5 @@ cmake-build-*/
 *.log
 out/
 .cache/
+
+.venv
