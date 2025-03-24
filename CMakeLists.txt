@@ -7,8 +7,24 @@ set(IN_SOURCE_BUILD ON)
 
 add_subdirectory(aws-c-common)
 if(UNIX AND NOT APPLE)
-    add_subdirectory(aws-lc)
+    # don't build tests for s2n or aws-lc
+    set(BUILD_TESTING_PREV ${BUILD_TESTING})
+    set(BUILD_TESTING OFF)
+
+    if(NOT USE_OPENSSL)
+        # s2n-tls uses libcrypto during its configuration, so we need to prebuild aws-lc.
+        include(AwsPrebuildDependency)
+        aws_prebuild_dependency(
+            DEPENDENCY_NAME AWSLC
+            SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/aws-lc
+            CMAKE_ARGUMENTS "-DBUILD_LIBSSL=OFF;-DBUILD_TESTING=OFF;-DDISABLE_GO=ON;-DDISABLE_PERL=ON"
+        )
+    endif()
+
+    set(UNSAFE_TREAT_WARNINGS_AS_ERRORS OFF) # disable warnings-as-errors when building s2n
     add_subdirectory(s2n)
+
+    set(BUILD_TESTING ${BUILD_TESTING_PREV})
 endif()
 add_subdirectory(aws-c-cal)
 add_subdirectory(aws-c-io)
